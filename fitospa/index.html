@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FITOSPA — оздоровительные бомбочки для ванн | Botanika & Garden</title>
+<meta name="description" content="FITOSPA — оздоровительные бомбочки для ванн и ванночек на основе органических трав Южного Урала. Три состава: Сила леса, Частичка солнца, Природный щит.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pine:#122e26;
+  --pine-2:#1a3d33;
+  --pine-3:#224a3e;
+  --linen:#f0e9db;
+  --linen-70:rgba(240,233,219,.72);
+  --linen-45:rgba(240,233,219,.45);
+  --line:rgba(240,233,219,.12);
+  --forest:#5c9a6c;
+  --sun:#ce7b33;
+  --meadow:#c489c0;
+  --ff-display:'Prata',Georgia,serif;
+  --ff-body:'Manrope',Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{
+  font-family:var(--ff-body);
+  background:var(--pine);
+  color:var(--linen);
+  line-height:1.7;
+  font-weight:300;
+}
+img{display:block;max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--linen);outline-offset:3px;border-radius:2px}
+
+/* ---------- header ---------- */
+header{
+  position:fixed;inset:0 0 auto 0;z-index:100;
+  background:rgba(18,46,38,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0;flex-wrap:wrap}
+.brand{display:flex;align-items:baseline;gap:10px;text-decoration:none}
+.brand b{font-family:var(--ff-display);font-weight:400;font-size:21px;letter-spacing:2px}
+.brand span{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--linen-45)}
+nav ul{display:flex;gap:26px;list-style:none;flex-wrap:wrap}
+nav a{
+  text-decoration:none;font-size:12px;font-weight:500;
+  letter-spacing:1.5px;text-transform:uppercase;color:var(--linen-70);
+  padding-bottom:3px;border-bottom:1px solid transparent;
+  transition:color .25s,border-color .25s;
+}
+nav a:hover{color:var(--linen);border-color:var(--linen)}
+.nav-cta{
+  font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;
+  text-decoration:none;color:var(--pine);background:var(--linen);
+  padding:10px 22px;border-radius:3px;transition:opacity .25s;
+}
+.nav-cta:hover{opacity:.85}
+
+/* ---------- hero ---------- */
+.hero{padding:150px 0 0}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.eyebrow{
+  font-size:11px;letter-spacing:3px;text-transform:uppercase;
+  color:var(--linen-45);margin-bottom:22px;
+}
+.eyebrow::before{content:"";display:inline-block;width:34px;height:1px;background:var(--linen-45);vertical-align:middle;margin-right:12px}
+h1{
+  font-family:var(--ff-display);font-weight:400;
+  font-size:clamp(2rem,4.4vw,3.4rem);line-height:1.22;margin-bottom:22px;
+}
+h1 em{font-style:normal;color:#a8c9a6}
+.hero p.lead{font-size:1.06rem;color:var(--linen-70);max-width:33em;margin-bottom:36px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:52px}
+.btn{
+  display:inline-block;text-decoration:none;font-weight:600;font-size:.78rem;
+  letter-spacing:1.8px;text-transform:uppercase;border-radius:3px;
+  padding:15px 34px;transition:transform .25s,opacity .25s,background .25s,color .25s;
+}
+.btn-solid{background:var(--linen);color:var(--pine)}
+.btn-solid:hover{opacity:.85;transform:translateY(-2px)}
+.btn-ghost{border:1px solid var(--linen-45);color:var(--linen)}
+.btn-ghost:hover{background:var(--linen);color:var(--pine)}
+.hero-figure{position:relative}
+.hero-figure img{border-radius:6px;box-shadow:0 30px 70px rgba(0,0,0,.4)}
+.hero-figure figcaption{
+  position:absolute;left:-18px;bottom:26px;
+  background:var(--pine);border:1px solid var(--line);border-radius:4px;
+  padding:12px 20px;font-size:.76rem;letter-spacing:1px;text-transform:uppercase;color:var(--linen-70);
+}
+.hero-facts{
+  display:flex;gap:0;border-top:1px solid var(--line);
+  margin-top:0;padding:30px 0 26px;flex-wrap:wrap;
+}
+.fact{flex:1;min-width:180px;padding-right:32px}
+.fact b{font-family:var(--ff-display);font-weight:400;font-size:1.5rem;display:block;color:var(--linen)}
+.fact span{font-size:.78rem;letter-spacing:1px;text-transform:uppercase;color:var(--linen-45)}
+
+/* ---------- sections ---------- */
+section{padding:96px 0}
+.sec-head{max-width:640px;margin-bottom:56px}
+.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+h2{font-family:var(--ff-display);font-weight:400;font-size:clamp(1.6rem,3vw,2.3rem);line-height:1.3;margin-bottom:16px}
+.sec-head p{color:var(--linen-70)}
+
+/* about */
+.about{border-top:1px solid var(--line)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.about-text p{color:var(--linen-70);margin-bottom:18px;font-size:1.02rem}
+.about-text p strong{color:var(--linen);font-weight:500}
+.about-list{list-style:none;margin-top:26px}
+.about-list li{
+  padding:13px 0 13px 30px;position:relative;
+  border-bottom:1px solid var(--line);font-size:.95rem;
+}
+.about-list li::before{
+  content:"";position:absolute;left:2px;top:22px;
+  width:9px;height:9px;border-radius:50%;
+  border:1.5px solid #a8c9a6;
+}
+.about-figure img{border-radius:6px}
+
+/* principles */
+.principles{background:var(--pine-2);border-top:1px solid var(--line)}
+.principle-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.principle{background:var(--pine-2);padding:42px 34px 46px;transition:background .3s}
+.principle:hover{background:var(--pine-3)}
+.principle .p-label{
+  display:inline-block;font-size:.68rem;letter-spacing:2px;text-transform:uppercase;
+  color:#a8c9a6;border:1px solid rgba(168,201,166,.35);border-radius:50px;
+  padding:4px 14px;margin-bottom:22px;
+}
+.principle h3{font-family:var(--ff-display);font-weight:400;font-size:1.22rem;margin-bottom:12px}
+.principle p{font-size:.92rem;color:var(--linen-70)}
+
+/* catalog */
+.catalog{border-top:1px solid var(--line)}
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}
+.product{
+  background:var(--pine-2);border:1px solid var(--line);border-radius:6px;
+  overflow:hidden;display:flex;flex-direction:column;
+  transition:transform .3s,box-shadow .3s;
+}
+.product:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.product-photo{height:260px;overflow:hidden}
+.product-photo img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.product:hover .product-photo img{transform:scale(1.05)}
+/* label block — как этикетка на упаковке */
+.product-label{padding:26px 28px 22px;border-top:3px solid;flex-grow:1;display:flex;flex-direction:column}
+.product[data-tone="forest"] .product-label{border-color:var(--forest)}
+.product[data-tone="sun"]    .product-label{border-color:var(--sun)}
+.product[data-tone="meadow"] .product-label{border-color:var(--meadow)}
+.product-herbs{font-size:.7rem;letter-spacing:1.6px;text-transform:uppercase;color:var(--linen-45);margin-bottom:8px}
+.product h3{font-family:var(--ff-display);font-weight:400;font-size:1.5rem;margin-bottom:4px}
+.product .pos{font-size:.86rem;margin-bottom:16px}
+.product[data-tone="forest"] .pos{color:#9cc4a4}
+.product[data-tone="sun"]    .pos{color:#e0a26b}
+.product[data-tone="meadow"] .pos{color:#d9aed6}
+.product ul{list-style:none;margin-bottom:24px}
+.product ul li{
+  font-size:.88rem;color:var(--linen-70);padding:7px 0 7px 22px;
+  position:relative;border-bottom:1px solid var(--line);
+}
+.product ul li:last-child{border-bottom:none}
+.product ul li::before{content:"·";position:absolute;left:4px;font-size:1.4rem;line-height:1;color:var(--linen-45)}
+.product ul li strong{color:var(--linen);font-weight:500}
+.product-btn{
+  margin-top:auto;text-align:center;text-decoration:none;
+  font-size:.74rem;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;
+  border:1px solid var(--linen-45);border-radius:3px;padding:12px;
+  transition:background .25s,color .25s;
+}
+.product-btn:hover{background:var(--linen);color:var(--pine)}
+
+/* how to */
+.howto{background:var(--pine-2);border-top:1px solid var(--line)}
+.use-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}
+.use{border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--pine)}
+.use img{width:100%;height:230px;object-fit:cover}
+.use-body{padding:26px 28px 30px}
+.use h3{font-family:var(--ff-display);font-weight:400;font-size:1.2rem;margin-bottom:12px}
+.use dl{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;font-size:.9rem}
+.use dt{color:var(--linen-45)}
+.use dd{color:var(--linen)}
+
+/* contact */
+.contact{border-top:1px solid var(--line)}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start}
+.contact-info p{color:var(--linen-70);margin-bottom:22px}
+.contact-info .origin{
+  border:1px solid var(--line);border-radius:6px;padding:22px 26px;
+  font-size:.92rem;color:var(--linen-70);
+}
+.contact-info .origin b{display:block;color:var(--linen);font-weight:500;margin-bottom:4px}
+form{display:grid;gap:18px}
+.field label{display:block;font-size:.74rem;letter-spacing:1.4px;text-transform:uppercase;color:var(--linen-45);margin-bottom:8px}
+.field input,.field textarea{
+  width:100%;background:var(--pine-2);border:1px solid var(--line);border-radius:4px;
+  color:var(--linen);font-family:var(--ff-body);font-size:.96rem;font-weight:300;
+  padding:14px 16px;transition:border-color .25s;
+}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--linen-45)}
+.field textarea{min-height:120px;resize:vertical}
+form .btn{border:none;cursor:pointer;font-family:var(--ff-body);justify-self:start}
+.form-note{font-size:.8rem;color:var(--linen-45)}
+.form-ok{
+  display:none;border:1px solid rgba(168,201,166,.4);border-radius:4px;
+  padding:14px 18px;font-size:.92rem;color:#a8c9a6;
+}
+.form-ok.show{display:block}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding:34px 0 40px}
+.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+.foot small{font-size:.78rem;color:var(--linen-45)}
+.foot .legal{display:flex;gap:22px}
+.foot a{font-size:.78rem;color:var(--linen-45);text-decoration:none}
+.foot a:hover{color:var(--linen)}
+
+/* reveal on scroll */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- responsive ---------- */
+@media(max-width:960px){
+  .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr;gap:44px}
+  .hero-figure{order:-1}
+  .principle-grid,.product-grid,.use-grid{grid-template-columns:1fr;gap:24px}
+  .principle-grid{gap:1px}
+  section{padding:72px 0}
+  .hero{padding-top:170px}
+}
+@media(max-width:600px){
+  nav ul{gap:14px}
+  .nav{justify-content:center}
+  .hero{padding-top:190px}
+  .fact{min-width:140px}
+  .hero-figure figcaption{left:12px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home"><b>FITOSPA</b><span>Botanika &amp; Garden</span></a>
+    <nav aria-label="Основная навигация">
+      <ul>
+        <li><a href="#about">О нас</a></li>
+        <li><a href="#principles">Качество</a></li>
+        <li><a href="#catalog">Продукция</a></li>
+        <li><a href="#howto">Применение</a></li>
+        <li><a href="#contact">Контакты</a></li>
+      </ul>
+    </nav>
+    <a class="nav-cta" href="#contact">Заказать</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">Органические травы Южного Урала</p>
+        <h1>Оздоровительные бомбочки <em>FITOSPA</em> для ванн и&nbsp;ванночек</h1>
+        <p class="lead">Ботаническое исцеление и забота о вашем теле. Древние знания официальной и народной медицины, соединённые с современными технологиями производства.</p>
+        <div class="hero-actions">
+          <a class="btn btn-solid" href="#catalog">Выбрать свой состав</a>
+          <a class="btn btn-ghost" href="#about">Узнать больше</a>
+        </div>
+      </div>
+      <figure class="hero-figure">
+        <img src="img/herbs.jpg" alt="Органические травы: пихта, календула, эхинацея и другие компоненты FITOSPA">
+        <figcaption>Сырьё · сбор 2026</figcaption>
+      </figure>
+    </div>
+    <div class="hero-facts">
+      <div class="fact"><b>100 %</b><span>натуральный состав</span></div>
+      <div class="fact"><b>3 состава</b><span>под разные задачи</span></div>
+      <div class="fact"><b>Южный Урал</b><span>эко-регион происхождения</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-text reveal">
+      <p class="eyebrow">О бренде</p>
+      <h2>Ботаническое исцеление для вашего здоровья</h2>
+      <p>Оздоровительные бомбочки FITOSPA от компании <strong>Botanika &amp; Garden</strong> — уникальный продукт на основе натуральных органических трав. В составе — полезные растения и компоненты, применяемые в официальной и народной медицине на протяжении веков.</p>
+      <p>Каждая бомбочка — это забота о теле и душе, объединяющая древние знания о лечебных свойствах растений с современными технологиями.</p>
+      <ul class="about-list">
+        <li>Комплексное оздоровление организма</li>
+        <li>100 % натуральный состав — без агрессивной химии и красителей</li>
+        <li>Безопасно для всей семьи</li>
+      </ul>
+    </div>
+    <figure class="about-figure reveal">
+      <img src="img/bath.jpg" alt="Расслабляющая ванна с бомбочкой FITOSPA">
+    </figure>
+  </div>
+</section>
+
+<!-- PRINCIPLES -->
+<section class="principles" id="principles">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <p class="eyebrow" style="justify-content:center">Качество</p>
+      <h2>Три принципа качества</h2>
+      <p>От поля до упаковки продукт проходит путь, на каждом этапе которого мы сохраняем силу растений.</p>
+    </div>
+    <div class="principle-grid reveal">
+      <div class="principle">
+        <span class="p-label">Сырьё</span>
+        <h3>Органическое земледелие</h3>
+        <p>Растения бережно выращиваются и собираются в экологически чистых районах Южного Урала — без пестицидов и искусственных удобрений.</p>
+      </div>
+      <div class="principle">
+        <span class="p-label">Обработка</span>
+        <h3>Естественная обработка</h3>
+        <p>Ультратонкая дезинтеграция и сепарация сырья позволяют сохранить максимум активных веществ каждого растения.</p>
+      </div>
+      <div class="principle">
+        <span class="p-label">Производство</span>
+        <h3>Фармацевтические технологии</h3>
+        <p>Производство ведётся по строгим технологическим стандартам качества, принятым в фармацевтической отрасли.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATALOG -->
+<section class="catalog" id="catalog">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Продукция</p>
+      <h2>Три состава — под любой запрос</h2>
+      <p>Каждый состав решает свою задачу: очищение, омоложение или укрепление иммунитета.</p>
+    </div>
+    <div class="product-grid">
+      <article class="product reveal" data-tone="forest">
+        <div class="product-photo"><img src="img/sila-lesa.jpg" alt="Бомбочка FITOSPA «Сила леса»: пихта, дуб, берёза"></div>
+        <div class="product-label">
+          <p class="product-herbs">Пихта · Дуб · Берёза</p>
+          <h3>Сила леса</h3>
+          <p class="pos">Общеукрепляющий и очищающий состав</p>
+          <ul>
+            <li><strong>Пихта сибирская</strong> — природный антисептик, детокс</li>
+            <li><strong>Листья и кора дуба</strong> — антибактериальный эффект, сужение пор</li>
+            <li><strong>Почки и листья берёзы</strong> — лимфодренаж, заживление микротрещин</li>
+          </ul>
+          <a class="product-btn" href="#contact">Заказать</a>
+        </div>
+      </article>
+
+      <article class="product reveal" data-tone="sun">
+        <div class="product-photo"><img src="img/chastichka-solnca.jpg" alt="Бомбочка FITOSPA «Частичка солнца»: календула, пустырник"></div>
+        <div class="product-label">
+          <p class="product-herbs">Пихта · Календула · Пустырник</p>
+          <h3>Частичка солнца</h3>
+          <p class="pos">Омолаживающий состав для кожи и волос</p>
+          <ul>
+            <li><strong>Цветки календулы</strong> — лечение акне, регенерация, разглаживание морщин</li>
+            <li><strong>Трава пустырника</strong> — снятие стресса</li>
+            <li><strong>Морская соль с магнием</strong> — расслабление и питание кожи</li>
+          </ul>
+          <a class="product-btn" href="#contact">Заказать</a>
+        </div>
+      </article>
+
+      <article class="product reveal" data-tone="meadow">
+        <div class="product-photo"><img src="img/prirodny-shit.jpg" alt="Бомбочка FITOSPA «Природный щит»: эхинацея, пустырник"></div>
+        <div class="product-label">
+          <p class="product-herbs">Эхинацея · Пустырник</p>
+          <h3>Природный щит</h3>
+          <p class="pos">Укрепление иммунитета и успокаивающий эффект</p>
+          <ul>
+            <li><strong>Эхинацея пурпурная</strong> — мощный антиоксидант, борьба с хронической усталостью</li>
+            <li><strong>Трава пустырника</strong> — расслабление нервной системы, улучшение сна</li>
+          </ul>
+          <a class="product-btn" href="#contact">Заказать</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO -->
+<section class="howto" id="howto">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <p class="eyebrow" style="justify-content:center">Применение</p>
+      <h2>Способы применения</h2>
+      <p>Один продукт — три сценария: полноценная ванна, ванночки и баня.</p>
+    </div>
+    <div class="use-grid">
+      <article class="use reveal">
+        <img src="img/bath.jpg" alt="Применение FITOSPA в ванне">
+        <div class="use-body">
+          <h3>Ванна</h3>
+          <dl>
+            <dt>Дозировка</dt><dd>1–2 шт.</dd>
+            <dt>Время</dt><dd>10–15 минут</dd>
+          </dl>
+        </div>
+      </article>
+      <article class="use reveal">
+        <img src="img/foot-bath.jpg" alt="Ванночка для ног с FITOSPA">
+        <div class="use-body">
+          <h3>Ванночки для рук и ног</h3>
+          <dl>
+            <dt>Дозировка</dt><dd>1 шт.</dd>
+            <dt>Время</dt><dd>7–10 минут</dd>
+          </dl>
+        </div>
+      </article>
+      <article class="use reveal">
+        <img src="img/sauna.jpg" alt="Применение FITOSPA в бане">
+        <div class="use-body">
+          <h3>Баня</h3>
+          <dl>
+            <dt>Дозировка</dt><dd>1 шт. на 5–7 л воды</dd>
+            <dt>Способ</dt><dd>для подливания на камни</dd>
+          </dl>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-info reveal">
+      <p class="eyebrow">Контакты</p>
+      <h2>Начните свой путь к здоровью и красоте вместе с FITOSPA</h2>
+      <p>Оставьте заявку — мы ответим на вопросы, поможем подобрать состав и соберём ваш SPA-набор.</p>
+      <div class="origin">
+        <b>Производство</b>
+        Россия, Южный Урал — экологически чистый регион с уникальным климатом и богатой почвой.
+      </div>
+    </div>
+    <form class="reveal" id="lead-form"
+      action="https://formsubmit.co/matyashdmitry36@gmail.com"
+      method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="Заявка с сайта FITOSPA">
+      <input type="hidden" name="_next" value="file:///C:/Users/TopGame/Downloads/fitospa-site/fitospa/index.html#contact">
+      <div class="field">
+        <label for="f-name">Ваше имя</label>
+        <input id="f-name" name="name" type="text" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="f-contact">Телефон или e-mail</label>
+        <input id="f-contact" name="contact" type="text" autocomplete="tel" required>
+      </div>
+      <div class="field">
+        <label for="f-msg">Ваш вопрос или комментарий</label>
+        <textarea id="f-msg" name="message"></textarea>
+      </div>
+      <button class="btn btn-solid" type="submit">Получить консультацию</button>
+      <p class="form-note">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности.</p>
+      <p class="form-ok" id="form-ok">Спасибо! Заявка принята — мы свяжемся с вами в ближайшее время.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <small>© 2026 Botanika &amp; Garden · FITOSPA — зарегистрированная торговая марка</small>
+    <div class="legal">
+      <a href="#home">Наверх</a>
+      <a href="#" onclick="return false">Политика конфиденциальности</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// плавное появление блоков
+const io = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// форма (демо: без бэкенда)
+// document.getElementById('lead-form').addEventListener('submit', e => {
+//   e.preventDefault();
+//   const form = e.target;
+//   const name = form.querySelector('#f-name');
+//   const contact = form.querySelector('#f-contact');
+//   const ok = document.getElementById('form-ok');
+
+//   if (!name.value.trim()) { name.focus(); return; }
+//   if (!contact.value.trim()) { contact.focus(); return; }
+
+//   form.reset();
+//   ok.classList.add('show');
+//   setTimeout(() => ok.classList.remove('show'), 6000);
+// });
+</script>
+</body>
+</html>
