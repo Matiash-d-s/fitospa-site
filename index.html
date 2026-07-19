@@ -253,10 +253,33 @@ footer{border-top:1px solid var(--line);padding:34px 0 40px}
   section{padding:72px 0}
   .hero{padding-top:170px}
 }
+.burger{
+  display:none;flex-direction:column;gap:5px;
+  background:none;border:none;cursor:pointer;padding:6px;
+}
+.burger span{
+  width:24px;height:2px;background:var(--linen);
+  transition:transform .3s,opacity .3s;
+}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+@media(max-width:820px){
+  .nav{flex-wrap:nowrap}
+  .burger{display:flex}
+  nav{
+    position:fixed;top:61px;left:0;right:0;
+    background:var(--pine);border-bottom:1px solid var(--line);
+    max-height:0;overflow:hidden;transition:max-height .35s ease;
+  }
+  nav.open{max-height:320px}
+  nav ul{flex-direction:column;gap:0;padding:10px 24px 18px}
+  nav a{display:block;padding:12px 0;font-size:13px;border-bottom:none}
+  .nav-cta{padding:8px 16px;font-size:11px}
+}
 @media(max-width:600px){
-  nav ul{gap:14px}
-  .nav{justify-content:center}
-  .hero{padding-top:190px}
+  hero{padding-top:190px}
   .fact{min-width:140px}
   .hero-figure figcaption{left:12px}
 }
@@ -267,6 +290,9 @@ footer{border-top:1px solid var(--line);padding:34px 0 40px}
 <header>
   <div class="wrap nav">
     <a class="brand" href="#home"><b>FITOSPA</b><span>Botanika &amp; Garden</span></a>
+    <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
     <nav aria-label="Основная навигация">
       <ul>
         <li><a href="#about">О нас</a></li>
@@ -511,7 +537,19 @@ const io = new IntersectionObserver(entries=>{
   entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
 },{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-
+const burger = document.getElementById('burger');
+const menu = document.querySelector('header nav');
+burger.addEventListener('click', () => {
+  const open = menu.classList.toggle('open');
+  burger.setAttribute('aria-expanded', open);
+});
+// закрывать меню при клике на пункт
+menu.querySelectorAll('a').forEach(a =>
+  a.addEventListener('click', () => {
+    menu.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+  })
+);
 // форма (демо: без бэкенда)
 // document.getElementById('lead-form').addEventListener('submit', e => {
 //   e.preventDefault();
