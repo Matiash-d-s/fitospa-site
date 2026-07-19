@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FITOSPA — оздоровительные бомбочки для ванн | Botanika & Garden</title>
-<meta name="description" content="FITOSPA — оздоровительные бомбочки для ванн и ванночек на основе органических трав Южного Урала. Три состава: Сила леса, Частичка солнца, Природный щит.">
+<meta name="description" content="FITOSPA — оздоровительные бомбочки для ванн и ванночек на основе трав Южного Урала. Три состава: Сила леса, Частичка солнца, Природный щит.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Prata&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -206,6 +206,22 @@ form{display:grid;gap:18px}
   color:var(--linen);font-family:var(--ff-body);font-size:.96rem;font-weight:300;
   padding:14px 16px;transition:border-color .25s;
 }
+.contact-list{list-style:none;margin-top:26px}
+.contact-list li{
+  display:flex;align-items:baseline;gap:18px;
+  padding:13px 0;border-bottom:1px solid var(--line);
+  font-size:.95rem;
+}
+.contact-list li span{
+  flex:0 0 90px;font-size:.72rem;letter-spacing:1.4px;
+  text-transform:uppercase;color:var(--linen-45);
+}
+.contact-list li a{
+  color:var(--linen);text-decoration:none;
+  border-bottom:1px solid var(--linen-45);
+  transition:border-color .25s,color .25s;
+}
+.contact-list li a:hover{color:#a8c9a6;border-color:#a8c9a6}
 .field input:focus,.field textarea:focus{outline:none;border-color:var(--linen-45)}
 .field textarea{min-height:120px;resize:vertical}
 form .btn{border:none;cursor:pointer;font-family:var(--ff-body);justify-self:start}
@@ -269,9 +285,9 @@ footer{border-top:1px solid var(--line);padding:34px 0 40px}
   <div class="wrap">
     <div class="hero-grid">
       <div>
-        <p class="eyebrow">Органические травы Южного Урала</p>
+        <p class="eyebrow">Травы Южного Урала</p>
         <h1>Оздоровительные бомбочки <em>FITOSPA</em> для ванн и&nbsp;ванночек</h1>
-        <p class="lead">Ботаническое исцеление и забота о вашем теле. Древние знания официальной и народной медицины, соединённые с современными технологиями производства.</p>
+        <p class="lead">Древние знания официальной и народной медицины, соединённые с современными технологиями производства.</p>
         <div class="hero-actions">
           <a class="btn btn-solid" href="#catalog">Выбрать свой состав</a>
           <a class="btn btn-ghost" href="#about">Узнать больше</a>
@@ -279,12 +295,11 @@ footer{border-top:1px solid var(--line);padding:34px 0 40px}
       </div>
       <figure class="hero-figure">
         <img src="img/herbs.jpg" alt="Органические травы: пихта, календула, эхинацея и другие компоненты FITOSPA">
-        <figcaption>Сырьё · сбор 2026</figcaption>
       </figure>
     </div>
     <div class="hero-facts">
       <div class="fact"><b>100 %</b><span>натуральный состав</span></div>
-      <div class="fact"><b>3 состава</b><span>под разные задачи</span></div>
+      <div class="fact"><b>3 состава</b><span>под любой запрос</span></div>
       <div class="fact"><b>Южный Урал</b><span>эко-регион происхождения</span></div>
     </div>
   </div>
@@ -295,9 +310,9 @@ footer{border-top:1px solid var(--line);padding:34px 0 40px}
   <div class="wrap about-grid">
     <div class="about-text reveal">
       <p class="eyebrow">О бренде</p>
-      <h2>Ботаническое исцеление для вашего здоровья</h2>
-      <p>Оздоровительные бомбочки FITOSPA от компании <strong>Botanika &amp; Garden</strong> — уникальный продукт на основе натуральных органических трав. В составе — полезные растения и компоненты, применяемые в официальной и народной медицине на протяжении веков.</p>
-      <p>Каждая бомбочка — это забота о теле и душе, объединяющая древние знания о лечебных свойствах растений с современными технологиями.</p>
+      <h2>Оздоровительные бомбочки FITOSPA от компании <strong>Botanika &amp; Garden</strong></h2>
+      <p>Уникальный продукт на основе натуральных органических трав. В составе — полезные растения и компоненты, применяемые в официальной и народной медицине на протяжении веков.</p>
+      <p>Каждая бомбочка FITOSPA — это забота о теле и душе, объединяющая древние знания о лечебных свойствах растений с современными технологиями.</p>
       <ul class="about-list">
         <li>Комплексное оздоровление организма</li>
         <li>100 % натуральный состав — без агрессивной химии и красителей</li>
@@ -344,11 +359,11 @@ footer{border-top:1px solid var(--line);padding:34px 0 40px}
     <div class="sec-head reveal">
       <p class="eyebrow">Продукция</p>
       <h2>Три состава — под любой запрос</h2>
-      <p>Каждый состав решает свою задачу: очищение, омоложение или укрепление иммунитета.</p>
+      <p>ОЧИЩЕНИЕ, ОМОЛОЖЕНИЕ, УКРЕПЛЕНИЕ ИММУНИТЕТА</p>
     </div>
     <div class="product-grid">
       <article class="product reveal" data-tone="forest">
-        <div class="product-photo"><img src="img/sila-lesa.jpg" alt="Бомбочка FITOSPA «Сила леса»: пихта, дуб, берёза"></div>
+        <div class="product-photo"><img src="img/FITOSPA дуб и береза.jpg" alt="Бомбочка FITOSPA «Сила леса»: пихта, дуб, берёза"></div>
         <div class="product-label">
           <p class="product-herbs">Пихта · Дуб · Берёза</p>
           <h3>Сила леса</h3>
@@ -363,7 +378,7 @@ footer{border-top:1px solid var(--line);padding:34px 0 40px}
       </article>
 
       <article class="product reveal" data-tone="sun">
-        <div class="product-photo"><img src="img/chastichka-solnca.jpg" alt="Бомбочка FITOSPA «Частичка солнца»: календула, пустырник"></div>
+        <div class="product-photo"><img src="img/FITOSPA календула.jpg" alt="Бомбочка FITOSPA «Частичка солнца»: календула, пустырник"></div>
         <div class="product-label">
           <p class="product-herbs">Пихта · Календула · Пустырник</p>
           <h3>Частичка солнца</h3>
@@ -378,7 +393,7 @@ footer{border-top:1px solid var(--line);padding:34px 0 40px}
       </article>
 
       <article class="product reveal" data-tone="meadow">
-        <div class="product-photo"><img src="img/prirodny-shit.jpg" alt="Бомбочка FITOSPA «Природный щит»: эхинацея, пустырник"></div>
+        <div class="product-photo"><img src="img/эхинацея пустырник.png" alt="Бомбочка FITOSPA «Природный щит»: эхинацея, пустырник"></div>
         <div class="product-label">
           <p class="product-herbs">Эхинацея · Пустырник</p>
           <h3>Природный щит</h3>
@@ -444,10 +459,29 @@ footer{border-top:1px solid var(--line);padding:34px 0 40px}
       <p class="eyebrow">Контакты</p>
       <h2>Начните свой путь к здоровью и красоте вместе с FITOSPA</h2>
       <p>Оставьте заявку — мы ответим на вопросы, поможем подобрать состав и соберём ваш SPA-набор.</p>
-      <div class="origin">
+     <div class="origin">
         <b>Производство</b>
         Россия, Южный Урал — экологически чистый регион с уникальным климатом и богатой почвой.
       </div>
+
+      <ul class="contact-list">
+        <li>
+          <span>Телефон</span>
+          <a href="tel:+76566567871">+7 (656) 656-78-71</a>
+        </li>
+        <li>
+          <span>Почта</span>
+          <a href="mailto:botanik_garden@bk.ru">botanik_garden@bk.ru</a>
+        </li>
+        <li>
+          <span>Max</span>
+          <a href="https://max.ru/id164512844809_biz" target="_blank" rel="noopener">Написать в Max</a>
+        </li>
+        <li>
+          <span>VK</span>
+          <a href="https://vk.com/club238722911" target="_blank" rel="noopener">Сообщество ВКонтакте</a>
+        </li>
+      </ul>
     </div>
     <div class="reveal">
       <script src="https://forms.yandex.ru/_static/embed.js"></script>
