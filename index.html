@@ -449,28 +449,15 @@ footer{border-top:1px solid var(--line);padding:34px 0 40px}
         Россия, Южный Урал — экологически чистый регион с уникальным климатом и богатой почвой.
       </div>
     </div>
-    <form class="reveal" id="lead-form"
-      action="https://formsubmit.co/matyash-d@list.ru"
-      method="POST">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_subject" value="Заявка с сайта FITOSPA">
-      <input type="hidden" name="_next" value="https://matiash-d-s.github.io/fitospa-site/#contact">
-      <div class="field">
-        <label for="f-name">Ваше имя</label>
-        <input id="f-name" name="name" type="text" autocomplete="name" required>
-      </div>
-      <div class="field">
-        <label for="f-contact">Телефон или e-mail</label>
-        <input id="f-contact" name="contact" type="text" autocomplete="tel" required>
-      </div>
-      <div class="field">
-        <label for="f-msg">Ваш вопрос или комментарий</label>
-        <textarea id="f-msg" name="message"></textarea>
-      </div>
-      <button class="btn btn-solid" type="submit">Получить консультацию</button>
-      <p class="form-note">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности.</p>
-      <p class="form-ok" id="form-ok">Спасибо! Заявка принята — мы свяжемся с вами в ближайшее время.</p>
-    </form>
+    <div class="reveal">
+      <script src="https://forms.yandex.ru/_static/embed.js"></script>
+      <iframe src="https://forms.yandex.ru/u/6a5ccf3d02848fa47bd76f92?iframe=1"
+              frameborder="0"
+              name="ya-form-6a5ccf3d02848fa47bd76f92"
+              width="100%"
+              style="min-height:640px"
+              title="Форма обратной связи FITOSPA"></iframe>
+    </div>
   </div>
 </section>
 
