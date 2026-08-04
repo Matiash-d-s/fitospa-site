@@ -279,9 +279,18 @@ footer{border-top:1px solid var(--line);padding:34px 0 40px}
   .nav-cta{padding:8px 16px;font-size:11px}
 }
 @media(max-width:600px){
-  hero{padding-top:190px}
+  .hero{padding-top:190px}
   .fact{min-width:140px}
   .hero-figure figcaption{left:12px}
+  .contact-list li{
+  flex-direction:column;
+  align-items:flex-start;
+  gap:6px;
+  padding:16px 0;
+}
+.contact-list li span{
+  flex:none;
+}
 }
 </style>
 </head>
@@ -511,7 +520,7 @@ footer{border-top:1px solid var(--line);padding:34px 0 40px}
     </div>
     <div class="reveal">
       <script src="https://forms.yandex.ru/_static/embed.js"></script>
-      <iframe src="https://forms.yandex.ru/u/6a5e24bb84227cb175ee925f?iframe=1" frameborder="0" name="ya-form-6a5e24bb84227cb175ee925f" width="650"></iframe>
+      <iframe src="https://forms.yandex.ru/u/6a5e24bb84227cb175ee925f?iframe=1" frameborder="0" name="ya-form-6a5e24bb84227cb175ee925f" width="100%" style="min-height:640px;max-width:100%"></iframe>
       <p class="form-note">Нажимая кнопку, вы соглашаетесь с <a href="privacy.html" style="color:inherit;text-decoration:underline">политикой обработки персональных данных</a>.</p>
     </div>
   </div>
